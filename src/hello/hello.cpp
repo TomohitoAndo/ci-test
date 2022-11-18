@@ -1,3 +1,4 @@
+// Copyright 2022 Tomohito Ando
 
 #include <iostream>
 
