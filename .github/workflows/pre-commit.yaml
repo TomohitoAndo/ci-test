@@ -40,5 +40,5 @@ jobs:
       - name: Run pre-commit
         uses: pre-commit/action@v2.0.3
         with:
-          extra_args: --all-files --config ${{ inputs.pre-commit-config }}
-          token: ${{ inputs.token }}
+          extra_args: --all-files --config .pre-commit-config.yaml
+          token: ${{ steps.generate-token.outputs.token }}
