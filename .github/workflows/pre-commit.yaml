@@ -45,6 +45,10 @@ jobs:
       - name: Run pre-commit
         run: |
           pre-commit run -a
+        shell: bash
+
+      - name: Push changes
+        run: |
           if ! git diff --quiet; then
             git add -u
             git commit -m "pre-commit fixes"
