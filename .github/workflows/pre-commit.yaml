@@ -48,6 +48,7 @@ jobs:
         shell: bash
 
       - name: Push changes
+        if: always
         run: |
           if ! git diff --quiet; then
             git add -u
