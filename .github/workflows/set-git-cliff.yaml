@@ -1,0 +1,13 @@
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up git-cliff
+        uses: TomohitoAndo/setup-git-cliff@v1
+
+      - name: Run git-cliff
+        run: |
+          git cliff
