@@ -49,4 +49,9 @@ repos:
     hooks:
       - id: hadolint
 
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+
 exclude: .svg
