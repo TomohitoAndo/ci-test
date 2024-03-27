@@ -27,7 +27,7 @@
     <include file="$(find-pkg-share sudden_deceleration_monitor)/launch/sudden_deceleration_monitor.launch.xml">
     </include>
   </group>
-  
+
   <!-- slip detector -->
   <group>
     <include file="$(find-pkg-share slip_detector)/launch/slip_detector.launch.xml">
