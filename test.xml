@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- collision checker -->
+  <group>
+    <include file="$(find-pkg-share collision_checker)/launch/collision_checker.launch.xml">
+      <arg name="param_path" value="$(find-pkg-share collision_checker)/config/collision_checker.param.yaml"/>
+    </include>
+  </group>
+
+  <!-- vehicle stuck checker-->
+  <group>
+    <include file="$(find-pkg-share vehicle_stuck_checker)/launch/vehicle_stuck_checker.launch.xml">
+      <arg name="param_path" value="$(find-pkg-share vehicle_stuck_checker)/config/vehicle_stuck_checker.param.yaml"/>
+    </include>
+  </group>
+
+  <!-- daytime monitor -->
+  <group>
+    <include file="$(find-pkg-share daytime_monitor)/launch/daytime_monitor.launch.xml">
+      <arg name="param_path" value="$(find-pkg-share daytime_monitor)/config/daytime_monitor.param.yaml"/>
+    </include>
+  </group>
+
+  <!--sudden deceleration monitor-->
+  <group>
+    <include file="$(find-pkg-share sudden_deceleration_monitor)/launch/sudden_deceleration_monitor.launch.xml">
+    </include>
+  </group>
+
+  <!-- slip detector -->
+  <group>
+    <include file="$(find-pkg-share slip_detector)/launch/slip_detector.launch.xml">
+      <arg name="param_path" value="$(find-pkg-share slip_detector)/config/slip_detector.param.yaml"/>
+    </include>
+  </group>
+</launch>
